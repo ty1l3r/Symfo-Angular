@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 
 import {Movie} from"../models/movie.model";
 import {Observable, Subject} from "rxjs";
+import {AlertService} from "../alert/alert.service";
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,9 @@ export class MovieService {
 
   public movieSubject = new Subject<Movie[]>();
 
-  constructor(private http: HttpClient) {  }
+  constructor(private http: HttpClient,
+              private router : Router,
+              private alertService : AlertService) {  }
 
   public setMovieList(){
     this.getMovie2server().subscribe(
@@ -32,6 +35,20 @@ export class MovieService {
   }
   public getMovie2server():Observable<any>{
     return this.http.get('https://localhost:8000/movies');
+  }
+
+  public newMovie(movie){
+      console.log(movie);
+      this.http.post('https://localhost:8000/movies',movie).subscribe(
+        (res)=>{
+          this.alertService.setAlert('Film enregistré correctement', 'success');
+          this.router.navigate(['/']);
+        },
+        (err)=>{
+          console.log(err);
+          this.alertService.setAlert('Une erreur s\'est produite','danger')
+        }
+      )
   }
 
 }//EO MovieService

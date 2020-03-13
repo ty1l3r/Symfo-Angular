@@ -1,10 +1,18 @@
 <nb-layout>
 
   <nb-layout-header fixed>
-  It's the header
+  <nav>
+    <ul>
+      <li routerLink="" routerLinkActive="active">Films </li>
+      <li routerLink="new" routerLinkActive="active">Nouveau</li>
+    </ul>
+
+  </nav>
+
   </nb-layout-header>
 
   <nb-layout-column>
+    <app-alert></app-alert>
     <router-outlet></router-outlet>
   </nb-layout-column>
 
