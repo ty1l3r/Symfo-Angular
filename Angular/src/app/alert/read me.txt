@@ -1,0 +1,11 @@
+Instalation:
+
+- Coller le dossier dans app
+- Importer AlertModule dans votre module
+- Ajouter AlertModule.forRoot() dans les imports
+
+
+Utilisation:
+- Utiliser la balise <app-alert></app-alert> à l'endroit ou les alertes doivent êtres affiché 
+- Importer AlertService dans les component ou service oû il faut generer des alerte
+- Utiliser la methode setAlert(alert:string, status:string) pour generer les alertes

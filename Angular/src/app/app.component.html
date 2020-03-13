@@ -1,0 +1,23 @@
+<nb-layout>
+
+  <nb-layout-header fixed>
+  <nav>
+    <ul>
+      <li routerLink="" routerLinkActive="active">Films </li>
+      <li routerLink="new" routerLinkActive="active">Nouveau</li>
+    </ul>
+
+  </nav>
+
+  </nb-layout-header>
+
+  <nb-layout-column>
+    <app-alert></app-alert>
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+
+  <nb-layout-footer fixed>
+      it's the footer
+  </nb-layout-footer>
+
+</nb-layout>

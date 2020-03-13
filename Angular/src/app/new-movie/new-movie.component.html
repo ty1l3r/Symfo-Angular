@@ -1,0 +1,31 @@
+<nb-card>
+  <nb-card-header>
+      Formulaire de création d'un film
+  </nb-card-header>
+  <nb-card-body>
+    <form #nameForm="ngForm" [formGroup]="movieForm">
+      <div class="form-group">
+        <label for="title">Titre</label>
+        <input type="text"
+               id="title"
+               nbInput
+               placeholder="titre du film"
+               formControlName="title"
+               fieldSize="medium"
+               fullWidth
+               [status]="movieForm.controls.title.invalid && (movieForm.controls.title.dirty || movieForm.controls.title.touched)? 'danger':'basic'"
+        >
+        <div *ngIf="movieForm.controls.title.invalid && (movieForm.controls.title.dirty || movieForm.controls.title.touched)" class="alert alert-danger">
+          <div *ngIf="movieForm.controls.title.errors.required">
+            Le nom du film est requis
+          </div>
+        </div>
+      </div>
+
+        <button type="submit" (click)="onSubmit()"  nbButton [disabled]="movieForm.invalid" status="success">Valider</button>
+    </form>
+  </nb-card-body>
+
+
+
+</nb-card>
