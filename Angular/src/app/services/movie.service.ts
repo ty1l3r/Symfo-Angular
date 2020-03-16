@@ -20,8 +20,10 @@ export class MovieService {
               private alertService : AlertService) {  }
 
   public setMovieList(){
+
     this.getMovie2server().subscribe(
       (res)=>{
+        console.log(res);
         this.movieList = res;
         this.emitMovieList();
       },
@@ -29,17 +31,17 @@ export class MovieService {
         console.log(err);
       }
     )
+
   }
   public emitMovieList(){
     this.movieSubject.next(this.movieList.slice());
   }
   public getMovie2server():Observable<any>{
-    return this.http.get('/movies');
+    return this.http.get('https://localhost:8000/movies');
   }
 
   public newMovie(movie){
-      console.log(movie);
-      this.http.post('/movies',movie).subscribe(
+      this.http.post('https://localhost:8000/movies',movie).subscribe(
         (res)=>{
           this.alertService.setAlert('Film enregistré correctement', 'success');
           this.router.navigate(['/']);
