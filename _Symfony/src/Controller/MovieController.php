@@ -17,6 +17,8 @@ class MovieController extends ApiController
     {
         $movies = $movieRepository->transformAll();
 
+        dump($movieRepository);
+
         return $this->respond($movies);
     }
 
@@ -27,10 +29,13 @@ class MovieController extends ApiController
     {
         $request = $this->transformJsonBody($request);
 
+
+
+    // Est ce que la requete existe ?
         if (! $request) {
+            //si elle n'existe pas on renvoi une érreur.
             return $this->respondValidationError('Please provide a valid request!');
         }
-
         // validate the title
         if (! $request->get('title')) {
             return $this->respondValidationError('Please provide a title!');
