@@ -6,12 +6,16 @@ use App\Repository\MovieRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use FOS\RestBundle\Controller\AbstractFOSRestController;
+use FOS\RestBundle\Controller\Annotations as Rest;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 
 class MovieController extends ApiController
 {
     /**
-    * @Route("/movies", methods="GET")
+     * @Rest\Get("/api/movies", name="getMovie")
+     * @IsGranted("ROLE_USER")
     */
     public function index(MovieRepository $movieRepository)
     {
@@ -23,7 +27,8 @@ class MovieController extends ApiController
     }
 
     /**
-    * @Route("/movies", methods="POST")
+    * @Rest\Post("/api/movies", methods="POST")
+     *@IsGranted("ROLE_SUPER_ADMIN")
     */
     public function create(Request $request, MovieRepository $movieRepository, EntityManagerInterface $em)
     {

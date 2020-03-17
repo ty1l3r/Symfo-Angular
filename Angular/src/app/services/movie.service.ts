@@ -37,11 +37,11 @@ export class MovieService {
     this.movieSubject.next(this.movieList.slice());
   }
   public getMovie2server():Observable<any>{
-    return this.http.get('https://localhost:8000/movies');
+    return this.http.get('https://localhost:8000/api/movies');
   }
 
   public newMovie(movie){
-      this.http.post('https://localhost:8000/movies',movie).subscribe(
+      this.http.post('https://localhost:8000/api/movies',movie).subscribe(
         (res)=>{
           this.alertService.setAlert('Film enregistré correctement', 'success');
           this.router.navigate(['/']);

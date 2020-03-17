@@ -107,6 +107,14 @@
       <path value="$PROJECT_DIR$/_Symfony/vendor/symfony/css-selector" />
       <path value="$PROJECT_DIR$/_Symfony/vendor/symfony/browser-kit" />
       <path value="$PROJECT_DIR$/_Symfony/vendor/symfony/test-pack" />
+      <path value="$PROJECT_DIR$/_Symfony/vendor/namshi/jose" />
+      <path value="$PROJECT_DIR$/_Symfony/vendor/lexik/jwt-authentication-bundle" />
+      <path value="$PROJECT_DIR$/_Symfony/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/_Symfony/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/_Symfony/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/_Symfony/vendor/friendsofsymfony/rest-bundle" />
+      <path value="$PROJECT_DIR$/_Symfony/vendor/willdurand/jsonp-callback-validator" />
+      <path value="$PROJECT_DIR$/_Symfony/vendor/willdurand/negotiation" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

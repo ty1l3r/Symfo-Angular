@@ -11,8 +11,10 @@
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/doctrine/cache" />
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/doctrine/collections" />
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/doctrine/common" />
+      <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/doctrine/data-fixtures" />
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/doctrine/dbal" />
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/doctrine/doctrine-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/doctrine/doctrine-fixtures-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/doctrine/doctrine-migrations-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/doctrine/event-manager" />
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/doctrine/inflector" />
@@ -24,8 +26,12 @@
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/doctrine/reflection" />
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/easycorp/easy-log-handler" />
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/friendsofsymfony/rest-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/jdorn/sql-formatter" />
+      <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/lcobucci/jwt" />
+      <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/lexik/jwt-authentication-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/namshi/jose" />
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/nelmio/cors-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/ocramius/package-versions" />
@@ -109,6 +115,8 @@
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/twig/extra-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/twig/twig" />
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/willdurand/jsonp-callback-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/willdurand/negotiation" />
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/zendframework/zend-code" />
       <excludeFolder url="file://$MODULE_DIR$/_Symfony/vendor/zendframework/zend-eventmanager" />
     </content>
